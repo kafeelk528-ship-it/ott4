@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>OTT Plans</title>
+</head>
+<body>
+  <h1>Choose Your OTT Plan</h1>
+
+  {% for p in plans %}
+      <div>
+          <h3>{{ p.name }}</h3>
+          <p>Price: ₹{{ p.price }}</p>
+          <a href="/plan/{{ p.id }}">View Details</a>
+      </div>
+      <hr>
+  {% endfor %}
+</body>
+</html>
