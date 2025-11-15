@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}Payment Success — OTT Store{% endblock %}
+{% block content %}
+<div class="success-card">
+  <h2>Payment Successful</h2>
+  <p>Thank you — your purchase completed in test mode.</p>
+  <p class="muted">This is a demo confirmation page. For a real app you'd save the order to the database here.</p>
+  <div class="cta-row">
+    <a class="btn primary" href="{{ url_for('show_plans') }}">Back to Plans</a>
+    <a class="btn ghost" href="{{ url_for('home') }}">Home</a>
+  </div>
+</div>
+{% endblock %}

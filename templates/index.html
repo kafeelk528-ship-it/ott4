@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Home — OTT Store{% endblock %}
+{% block content %}
+<section class="hero">
+  <div class="hero-left">
+    <h1>Buy OTT subscriptions — fast & easy</h1>
+    <p>Choose top OTT plans (Netflix, Prime, Hotstar) and checkout instantly. Test payments with Stripe test keys.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="{{ url_for('show_plans') }}">Browse Plans</a>
+      <a class="btn ghost" href="{{ url_for('show_plans') }}">Quick Demo</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="card-hero">
+      <div class="card-badge">Popular</div>
+      <h3>Netflix — 1 Month</h3>
+      <p class="muted">₹199</p>
+      <a class="btn small" href="{{ url_for('plan_details', id=1) }}">View</a>
+    </div>
+  </div>
+</section>
+<section class="features">
+  <div class="feature">
+    <h4>Secure Payments</h4>
+    <p>Stripe test mode supported — no real money needed for demo.</p>
+  </div>
+  <div class="feature">
+    <h4>Simple Admin</h4>
+    <p>Add or edit plans from code or later admin panel.</p>
+  </div>
+  <div class="feature">
+    <h4>Responsive</h4>
+    <p>Looks good on mobile and desktop for presentation.</p>
+  </div>
+</section>
+{% endblock %}
